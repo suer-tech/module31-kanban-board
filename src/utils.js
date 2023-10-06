@@ -1,14 +1,14 @@
 import { User } from "./models/User";
 
-const getFromStorage = (key) => JSON.parse(localStorage.getItem(key) || "[]");
+export const getFromStorage = (key) => JSON.parse(localStorage.getItem(key) || "[]");
 
-const addToStorage = (obj, key) => {
+export const addToStorage = (obj, key) => {
   const storageData = getFromStorage(key);
   storageData.push(obj);
   localStorage.setItem(key, JSON.stringify(storageData));
 };
 
-const generateTestUser = (User) => {
+export const generateTestUser = (User) => {
   if (!localStorage.users) {
     const testUser = new User("admin", "1", "admin");
     User.save(testUser);
@@ -17,7 +17,7 @@ const generateTestUser = (User) => {
   }
 };
 
-const formNewUser = () => {
+export const formNewUser = () => {
   const newUser = document.querySelector('.newUser');
   const formNewLogin = document.querySelector('.newLogin');
   const formNewPassword = document.querySelector('.newPassword');

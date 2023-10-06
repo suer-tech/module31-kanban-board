@@ -1,5 +1,4 @@
 import { BaseModel } from "./BaseModel";
-import { getFromStorage, addToStorage } from "../utils";
 
 export class User extends BaseModel {
   constructor(login, password, role) {
@@ -23,6 +22,7 @@ export class User extends BaseModel {
 
   static save(user) {
     try {
+      const { getFromStorage, addToStorage } = require("../utils");
       addToStorage(user, user.storageKey);
       return true;
     } catch (e) {

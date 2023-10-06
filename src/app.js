@@ -362,7 +362,3 @@ function activeTask() {
   document.querySelector('.finishedTask').textContent = `Finished tasks: ${finishedTaskCount}`;
 }
 
-// Инициализация при загрузке страницы
-window.addEventListener('load', () => {
-  // Ваш код для инициализации страницы, если необходимо
-});
