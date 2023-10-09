@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+p{
+  margin-bottom: 0;
+}
+
+#app-login-btn {
+  width: 160px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.menu {
+  height: 55px;
+  background: #0067A3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.statistic {
+  display: flex;
+  gap: 36px;
+}
+
+
+
+/*Стилизация лого*/
+
+.title {
+  display: flex;
+  margin-left: 20px;
+}
+
+@media (max-width: 838px) { 
+  .menu{
+    justify-content:end;
+    background: #0079BF;
+  }
+  .title {
+    display: none;
+  }
+}
+
+.logo {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  align-self: center;
+}
+
+.logo:hover {
+  color: #FFF;
+}
+
+/**/
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+}
+
+.navPage{
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.pages {
+  position: relative;
+}
+
+.head {
+  background-color: white;
+  border-radius: 50%;
+}
+
+#romb {
+  width: 11px;
+  height: 11px;
+  transform: rotate(45deg);
+  background: #FFF;
+  position: absolute;
+  top: 114%;
+  left: 20px;
+  z-index: 1;
+}
+
+#ulPage {
+  position: absolute;
+  list-style-type: none;
+  margin-top: 11px;
+  padding-left: 0;
+  right: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #FFF;
+  width: 134px;
+  padding: 8px 7px;
+  color: #000;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 1s;
+  z-index: 1;
+}
+
+.liPage{
+  margin: 3px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+button {
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.liPage:hover {
+  background: #cccccc;
+  border-radius: 5px;
+}
+
+.ulResult {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/*основной контент*/
+
+.thisPage {
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+.addUser{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  min-height: 197px;
+  border-radius: 10px;
+  background: #EBECF0;
+}
+
+.newUser {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+.ulResult{
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+.liResult{
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btnDelete {
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: red;
+}
+
+.board__buttons{
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  list-style-type: none;
+  border-radius: 5px;
+  padding: 5px;
+  background: #FFF;
+  overflow: hidden;
+  max-width: 80%;
+}
+
+.dropdown li {
+  cursor: pointer;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.userCreate {
+  text-transform: lowercase;
+  color: #0008;
+}
+
+.dropdown li:hover {
+  background-color: #EBECF0;
+  border-radius: 5px;
+}
+
+.panel {
+  background-color: #0079BF;
+  height: 100vh;
+}
+
+input {
+  display: block;
+}
+
+/* ОСНОВНАЯ ДОСКА */
+
+.board {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 12px;
+  gap: 24px;
+}
+
+.board__category {
+  display: flex;
+  align-self: baseline;
+  width: 282px;
+  gap: 8px;
+  flex-direction: column;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background: #EBECF0;
+}
+
+.board__title {
+  color: #000;
+  font-family: Roboto;
+  font-size: 18px;
+  padding: 12px 12px 0;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.board__items {
+  display: flex;
+  flex-direction: column;
+  max-height: 538px;
+  padding: 12px;
+  overflow-y: auto;
+  gap: 8px;
+}
+
+::-webkit-scrollbar {
+  width: 12px; 
+  background-color: white;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #CBCBCB;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a3a3a3;
+}
+
+.board__item {
+  position: relative;
+  border-radius: 5px;
+  background: #FFF;
+  padding: 7px 8px;
+}
+
+.board__itemText {
+  word-wrap: break-word;
+}
+
+.board__buttons {
+  display: flex;
+}
+
+.board__add, .board__move, .board__submit  {
+  display: flex;
+  align-items: center;
+  width: min-content;
+  gap: 3px;
+  margin: 0 12px 12px;
+  padding: 3px 9px;
+  border-radius: 3px;
+  color: #5E6C84;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.board__move:not(:disabled):hover, .board__add:not(:disabled):hover{
+  background: white;
+}
+
+.board__add:disabled, .board__move:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.board__submit {
+  border-radius: 5px;
+  background: #0079BF;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  width: min-content;
+}
+
+textarea {
+  border: none;
+  width: 100%;
+  font-family: Roboto;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.board__delete {
+  display: inline;
+  color: red;
+  cursor: pointer;
+  user-select: none;
+  float: right;
+  padding: 3px;
+}
